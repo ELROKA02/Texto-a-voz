@@ -30,14 +30,14 @@ function loadVoices() {
   voiceSelect.innerHTML = "";
 
   // TODO: Loop through voices and create option elements
+  // TODO: Set option value to index, text to voice name and language
   voces.forEach((voz, index) => {
     const opcion = document.createElement("option");
     opcion.value = index;
     opcion.textContent = `${voz.name} (${voz.lang})`;
-    voiceSelect.appendChild(option);
+    voiceSelect.appendChild(opcion);
   });
 
-  // TODO: Set option value to index, text to voice name and language
   console.log(`Cargado ${voces.length} voces`);
 
 }

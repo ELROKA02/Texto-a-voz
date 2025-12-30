@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Texto a Voz</title>
+    <link rel="stylesheet" href="estilos.css" />
+    
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <h1>🎧 Aplicación de Texto a Voz</h1>
+    </header>
+
+    <div class="container">
+        <!-- Instruciones -->
+        <div class="card instructions">
+            <h3>¿Como se usa?</h3>
+            <ol>
+                <li>Escribe o pega el texto abajo</li>
+                <li>Selecciona una voz</li>
+                <li>Ajusta la velocidad y el pitch si lo desea</li>
+                <li>¡Presiona el boton para oirlo!</li>
+            </ol>
+        </div>
+
+        <!-- Text Input -->
+        <div class="card">
+            <label for="text-input">
+                <strong>Tu texto</strong>
+                <span class="char-counter">
+                    <span id="char-count">0</span> caracteres
+                </span>
+            </label>
+            <textarea id="text-input" placeholder="Introduce texto para escucharlo..." rows="8"></textarea>
+        </div>
+
+        <!-- Seleccion de voces -->
+        <div class="card">
+            <label for="voice-select">
+                <strong>Voces</strong>
+            </label>
+            <select id="voice-select">
+                <option value="">Cargando voces...</option>
+            </select>
+        </div>
+
+        <!-- Controles -->
+        <div class="card controls-grid">
+            <!-- Velocidad -->
+            <div class="control-group">
+                <label for="speed-slider">
+                    Velocidad: <span id="speed-value">1.0</span>x
+                </label>
+                <input type="range" id="speed-slider" min="0.5" max="2" step="0.1" value="1" />
+            </div>
+
+            <!-- Pitch -->
+            <div class="control-group">
+                <label for="pitch-slider">
+                    Pitch: <span id="pitch-value">1.0</span>
+                </label>
+                <input type="range" id="pitch-slider" min="0" max="2" step="0.1" value="1" />
+            </div>
+        </div>
+
+        <!-- Botones -->
+        <div class="button-group">
+            <button id="speak-btn" class="btn-primary">🔊 Oír</button>
+            <button id="stop-btn" class="btn-secondary">⏹️ Parar</button>
+        </div>
+
+        <!-- Indicador de estado -->
+        <div id="status" class="status">
+            <span class="status-dot"></span>
+            <span id="status-text">Listo</span>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>
+            Realizado con el ❤️ por Samuel |
+            <a href="https://github.com/ELROKA02" target="_blank">ELROKA02</a>
+        </p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
